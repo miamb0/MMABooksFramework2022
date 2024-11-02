@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "mySql": "server=127.0.0.1;uid=root;pwd=389Mb918M15*ot;database=MMABooksFramework"
+  }
+}

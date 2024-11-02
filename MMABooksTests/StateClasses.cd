@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+
+	<!-- Base Classes and Interfaces -->
+	<Class Name="MMABooksTools.BaseBusiness" Collapsed="true">
+		<Position X="1" Y="2" Width="2.5" />
+		<TypeIdentifier />
+	</Class>
+	<Class Name="MMABooksTools.BaseSQLDB" Collapsed="true">
+		<Position X="4" Y="2" Width="2.5" />
+		<TypeIdentifier />
+	</Class>
+	<Interface Name="MMABooksTools.IReadDB">
+		<Position X="2.5" Y="0.5" Width="2.5" />
+		<TypeIdentifier />
+	</Interface>
+	<Interface Name="MMABooksTools.IWriteDB">
+		<Position X="5.5" Y="0.5" Width="2.5" />
+		<TypeIdentifier />
+	</Interface>
+	<Interface Name="MMABooksTools.IBaseProps" Collapsed="true">
+		<Position X="7.5" Y="2" Width="2.5" />
+		<TypeIdentifier />
+	</Interface>
+
+	<!-- Product Class and Related Classes -->
+	<Class Name="MMABooksBusiness.Product">
+		<Position X="1" Y="5" Width="2.5" />
+		<TypeIdentifier />
+	</Class>
+	<Class Name="MMABooksDB.ProductDB">
+		<Position X="4" Y="5" Width="2.5" />
+		<TypeIdentifier />
+		<Lollipop Orientation="Left" Position="0.1" />
+	</Class>
+	<Class Name="MMABooksProps.ProductProps">
+		<Position X="7" Y="5" Width="2.75" />
+		<TypeIdentifier />
+		<Lollipop Position="0.2" />
+	</Class>
+
+	<!-- Relationships -->
+	<Inheritance Parent="MMABooksTools.BaseBusiness" Child="MMABooksBusiness.Product" />
+	<Association From="MMABooksBusiness.Product" To="MMABooksDB.ProductDB" />
+	<Association From="MMABooksBusiness.Product" To="MMABooksProps.ProductProps" />
+	<Realization From="MMABooksDB.ProductDB" To="MMABooksTools.IReadDB" />
+	<Realization From="MMABooksDB.ProductDB" To="MMABooksTools.IWriteDB" />
+	<Realization From="MMABooksProps.ProductProps" To="MMABooksTools.IBaseProps" />
+
+	<!-- Font and Diagram Settings -->
+	<Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
